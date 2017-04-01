@@ -1,8 +1,8 @@
   <div class="review<%= ThumbsYupRails.configuration.review_size.capitalize %>">
     <div class="rstyle<%= ThumbsYupRails.configuration.review_color.capitalize + ThumbsYupRails.configuration.review_style.capitalize + ThumbsYupRails.configuration.review_background.capitalize %>">
-      <%= body %>
+      <%= CGI::escapeHTML(body) %>
     </div>
     <p class="signature">
-      <%= first_name %>
+      <%= CGI::escapeHTML(first_name) %>
     </p>
   </div>

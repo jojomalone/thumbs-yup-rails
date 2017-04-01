@@ -16,11 +16,13 @@ module ThumbsYupRails
           reviews_html += decorate(review)
         end
 
-        TemplateRenderer::render_page(
+        html = TemplateRenderer::render_page(
           settings: settings,
           pagination: pagination(metadata),
           reviews_html: reviews_html
         )
+
+        html.html_safe
       end
 
       private
