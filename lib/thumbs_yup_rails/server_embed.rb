@@ -6,6 +6,8 @@ module ThumbsYupRails
       require_relative 'template_renderer'
 
       def render_public_reviews(page: nil)
+        check_user_identifer!
+
         reviews_html = ""
 
         review_data = json_review_data(page: page)
@@ -26,6 +28,17 @@ module ThumbsYupRails
       end
 
       private
+
+      def check_user_identifer!
+        if ThumbsYupRails.configuration.user_identifier.nil?
+          raise <<-EOS
+            Create your user_identifier in: config/initializers/thumbs_yup_rails_init.rb
+            ThumbsYupRails.configure do |config|
+              config.user_identifier = "your-website-identifier"
+            end
+          EOS
+        end
+      end
 
       def json_review_data(page:)
         url = ThumbsYupRails.configuration.thumbs_yup_url + '/site/' + ThumbsYupRails.configuration.user_identifier
