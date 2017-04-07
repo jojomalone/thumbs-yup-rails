@@ -1,7 +1,6 @@
 require 'thumbs_yup_rails/version'
 require 'thumbs_yup_rails/configuration'
 require 'thumbs_yup_rails/server_embed'
-require 'thumbs_yup_rails/railtie' if defined?(Rails)
 
 module ThumbsYupRails
   class << self
@@ -15,3 +14,5 @@ module ThumbsYupRails
     end
   end
 end
+
+require 'thumbs_yup_rails/railtie' if defined?(Rails)
