@@ -3,6 +3,7 @@ lib = File.join(File.dirname(__FILE__), 'lib')
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'thumbs_yup_rails'
+require 'thumbs_yup_rails/configuration'
 
 Gem::Specification.new do |spec|
   spec.name          = "thumbs-yup-rails"
