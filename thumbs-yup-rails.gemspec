@@ -1,13 +1,13 @@
 # coding: utf-8
 #lib = File.join(File.dirname(__FILE__), 'lib')
 #$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+puts "*************** IN GEMSPEC before require"
+require 'thumbs_yup_rails'
 
 $:.push File.expand_path("../lib", __FILE__)
 #require "thumbs_yup_rails/version"
 
-puts "*************** IN GEMSPEC before require"
 
-require 'thumbs_yup_rails'
 
 puts "*************** IN GEMSPEC after require"
 #require 'thumbs_yup_rails/configuration'
