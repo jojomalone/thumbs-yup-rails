@@ -5,7 +5,11 @@
 $:.push File.expand_path("../lib", __FILE__)
 #require "thumbs_yup_rails/version"
 
+puts "*************** IN GEMSPEC before require"
+
 require 'thumbs_yup_rails'
+
+puts "*************** IN GEMSPEC after require"
 #require 'thumbs_yup_rails/configuration'
 
 Gem::Specification.new do |spec|
