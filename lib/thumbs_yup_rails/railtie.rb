@@ -1,7 +1,10 @@
 module ThumbsYupRails
   class Railtie < ::Rails::Railtie
-    config.before_configuration do
-      Configuration.configure
+    initializer "thumbs_yup_rails config" do |app|
+      configure do |config|
+        class Configuration::ThumbsYupRails; end
+        app.config.middleware.insert_before "ThumbsYupRails::Middleware"
+      end
     end
   end
 end
