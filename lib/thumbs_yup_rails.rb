@@ -5,6 +5,8 @@ require 'thumbs_yup_rails/server_embed'
 
 puts "*************** IN GEM"
 
+class ThumbsYupRails::Configuration; end
+
 module ThumbsYupRails
   class << self
     def configure(&block)
@@ -17,5 +19,3 @@ module ThumbsYupRails
     end
   end
 end
-
-#require 'thumbs_yup_rails/railtie' if defined?(Rails)
