@@ -1,9 +1,12 @@
 # coding: utf-8
-lib = File.join(File.dirname(__FILE__), 'lib')
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+#lib = File.join(File.dirname(__FILE__), 'lib')
+#$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+$:.push File.expand_path("../lib", __FILE__)
+#require "thumbs_yup_rails/version"
 
 require 'thumbs_yup_rails'
-require 'thumbs_yup_rails/configuration'
+#require 'thumbs_yup_rails/configuration'
 
 Gem::Specification.new do |spec|
   spec.name          = "thumbs-yup-rails"
