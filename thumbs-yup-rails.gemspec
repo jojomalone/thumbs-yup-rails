@@ -7,10 +7,10 @@ $:.push File.expand_path("../lib", __FILE__)
 require "thumbs_yup_rails/version"
 require 'thumbs_yup_rails/configuration'
 require 'thumbs_yup_rails'
+require 'thumbs_yup_rails/railtie'# if defined? ::Rails::Railtie
 
 
 puts "*************** IN GEMSPEC 2"
-#require 'thumbs_yup_rails/configuration'
 
 Gem::Specification.new do |spec|
   spec.name          = "thumbs-yup-rails"
@@ -43,4 +43,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry"
+  #spec.add_development_dependency "rails"
 end
