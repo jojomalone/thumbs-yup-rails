@@ -1,20 +1,20 @@
 # coding: utf-8
 #lib = File.join(File.dirname(__FILE__), 'lib')
 #$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-puts "*************** IN GEMSPEC before require"
-require 'thumbs_yup_rails'
+puts "*************** IN GEMSPEC 1"
 
 $:.push File.expand_path("../lib", __FILE__)
-#require "thumbs_yup_rails/version"
+require "thumbs_yup_rails/version"
+require 'thumbs_yup_rails/configuration'
+require 'thumbs_yup_rails'
 
 
-
-puts "*************** IN GEMSPEC after require"
+puts "*************** IN GEMSPEC 2"
 #require 'thumbs_yup_rails/configuration'
 
 Gem::Specification.new do |spec|
   spec.name          = "thumbs-yup-rails"
-  spec.version       = ThumbsYupRails::VERSION
+  spec.version       = Thumbs::Yup::Rails::VERSION
   spec.authors       = ["Jomana Malone", "Scott Malone"]
   spec.email         = ["jomana.malone@gmail.com", "scottmalone101@gmail.com"]
 
